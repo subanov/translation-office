@@ -12,17 +12,16 @@ These two different business parts of software are web based applications, one f
 ## Requirements
 
 1. Customer Purchasing Translation Task
-    a. Customer visits the office website.
-    a. If they are already a client, they log in.
-    a. They choose their translation languages to and from.
-    a. They upload their scanned document to be analysed
-    a. They choose what kind of translation they need (Medical, Technical, Law etc.)
-    a. They choose speed of translation task.
-    a. They choose if they need approval from notary.
-    a. They see the fee of translation task, any reward coupons and discounts will be applied if they are a client. The fee will be based on firstly the scanned document (word count), the languages, notary fee calculation and other factors customer chose.
-    a. The customer choose payment method, credit card, etc.
-    a. For payment methods which don't automatically transfer money from customer's account, the customer receives a message with a link to assure they have paid translation fee. 
-
+    1. Customer visits the office website.
+    1. If they are already a client, they log in.
+    1. They choose their translation languages to and from.
+    1. They upload their scanned document to be analysed
+    1. They choose what kind of translation they need (Medical, Technical, Law etc.)
+    1. They choose speed of translation task.
+    1. They choose if they need approval from notary.
+    1. They see the fee of translation task, any reward coupons and discounts will be applied if they are a client. The fee will be based on firstly the scanned document (word count), the languages, notary fee calculation and other factors customer chose.
+    1. The customer choose payment method, credit card, etc.
+    1. For payment methods which don't automatically transfer money from customer's account, the customer receives a message with a link to assure they have paid translation fee. 
 
 ## Tech Stack
 

@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  to-postgres:
+    image: postgres:15
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: "translationoffice"
+      POSTGRES_USER: "translationoffice"
+      POSTGRES_PASSWORD: "coolPWD!@#"
+      PGUSER: "translationoffice"

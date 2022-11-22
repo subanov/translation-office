@@ -3,11 +3,11 @@ using TranslationOffice.Domain;
 
 namespace TranslationOffice.Application.Data.Commands;
 
-public abstract class InsertDbContextDataCommand<TE> : IInsertDataCommand<TE> where TE : class, IEntity
+public abstract class EfInsertDataCommand<TE> : IInsertDataCommand<TE> where TE : class, IEntity
 {
     private readonly DbSet<TE> _dbSet;
 
-    protected InsertDbContextDataCommand(DbContext dbContext)
+    protected EfInsertDataCommand(DbContext dbContext)
     {
         _dbSet = dbContext.Set<TE>();
     }

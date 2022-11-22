@@ -23,6 +23,7 @@ services.AddScoped(sp =>
 });
 
 services.AddScoped<IUnitOfWork, TranslationOfficeUnitOfWork>();
+services.AddSingleton<IAsyncMaker, EfAsyncMaker>();
 
 services.AddTranslatorDependencies();
 

@@ -5,7 +5,7 @@ public record TranslatorAddDto(string Name, string Surname, string Patronymic) :
     public Translator Map() => new(Name, Surname, Patronymic);
 }
 
-public interface ITranslatorInsertDataCommand : IInsertDataCommand<TranslatorAddDto, Translator>
+public interface ITranslatorInsertDataCommand : IInsertDataCommand<Translator>
 {
 }
 

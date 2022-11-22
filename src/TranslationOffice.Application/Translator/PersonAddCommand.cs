@@ -4,7 +4,7 @@ using TranslationOffice.Domain;
 
 namespace TranslationOffice.Application;
 
-public sealed class TranslatorInsertDbContextDataCommand : InsertDbContextDataCommand<TranslatorAddDto, Translator>, ITranslatorInsertDataCommand
+public sealed class TranslatorInsertDbContextDataCommand : InsertDbContextDataCommand<Translator>, ITranslatorInsertDataCommand
 {
     public TranslatorInsertDbContextDataCommand(TranslationOfficeDbContext dbContext) : base(dbContext)
     {

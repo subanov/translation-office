@@ -3,9 +3,7 @@ using TranslationOffice.Domain;
 
 namespace TranslationOffice.Application.Data.Commands;
 
-public abstract class InsertDbContextDataCommand<TM, TE> : IInsertDataCommand<TM, TE>
-    where TE : class, IEntity
-    where TM : IEntityMap<TE>
+public abstract class InsertDbContextDataCommand<TE> : IInsertDataCommand<TE> where TE : class, IEntity
 {
     private readonly DbSet<TE> _dbSet;
 
@@ -14,9 +12,8 @@ public abstract class InsertDbContextDataCommand<TM, TE> : IInsertDataCommand<TM
         _dbSet = dbContext.Set<TE>();
     }
 
-    public async Task<TE> InsertAsync(TM toMap, CancellationToken ct = default)
+    public async Task<TE> InsertAsync(TE entity, CancellationToken ct = default)
     {
-        var entity = toMap.Map();
         var entry = await _dbSet.AddAsync(entity, ct);
         return entry.Entity;
     }
